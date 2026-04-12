@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanita pilihan'ku ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="music" loop>
+        <source src="img/Sound ultah.mpeg" type="audio/mpeg">
+    </audio>
+
+    <div class="overlay"></div>
+    <canvas id="canvas"></canvas>
+
+    <div id="login-layer" class="main-card">
+        <div class="glass">
+            <h2 class="hb-text">Siapa Kamu? ❤️</h2>
+            <p style="color: white; margin-bottom: 20px;">Pilih tanggal lahirmu untuk membuktikan kamu adalah milikku:</p>
+            
+            <div class="birthday-selector">
+                <select id="sel-tgl" class="custom-select"></select>
+                <select id="sel-bln" class="custom-select"></select>
+                <select id="sel-thn" class="custom-select"></select>
+            </div>
+            
+            <div id="feedback-msg" class="feedback"></div>
+            
+            <div class="action-buttons">
+                <button id="btn-login" onclick="checkBirthday()">Masuk ✨</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gift-layer" class="main-card hidden">
+        <div class="glass" onclick="openGift()" style="cursor: pointer; padding: 50px 20px;">
+            <div class="gift-icon">🎁</div>
+            <h2 class="hb-text" style="margin-top: 20px;">Ada kado untukmu!</h2>
+            <p style="color: white; font-weight: bold;">Klik kado untuk Buka Hadiah ✨</p>
+        </div>
+    </div>
+
+    <div id="main-layer" class="main-card hidden">
+        <div class="glass main-content">
+            <div class="header-fixed">
+                <div class="photo-container">
+                    <img src="img/Susi aprilia.jpeg" alt="Susi Aprilia" class="profile-img">
+                    <div class="pulse"></div>
+                </div>
+                <h1 class="hb-text">Barakallah fii umrik, Susi Aprilia! ✨</h1>
+            </div>
+            
+            <div class="scrollable-body">
+                <div class="message-box">
+                    <span id="typing-text"></span>
+                </div>
+
+                <div id="game-trigger" class="hidden" style="margin-top: 20px; text-align: center;">
+                    <p style="color: white; margin-bottom: 15px;">Selesaikan tantangan kecil dulu ya sayang.. ❤️</p>
+                    <button onclick="playGame()" style="background: var(--accent); width: 100%;">Main Game Dulu ✨</button>
+                </div>
+
+                <div id="gift-question" class="hidden" style="margin-top: 20px;">
+                    <p style="color: white; margin-bottom: 15px; font-weight: bold;">Sebagai Hadiah Dari Aku, Ayang Mau Ke?</p>
+                    <div class="gift-options">
+                        <button class="opt-btn" onclick="selectGift('Cafe')">Cafe ☕</button>
+                        <button class="opt-btn" onclick="selectGift('Wisata')">Wisata 🎡</button>
+                        <button class="opt-btn" onclick="selectGift('Gunung')">Gunung ⛰️</button>
+                        <button class="opt-btn" onclick="selectGift('Restoran')">Restoran 🍕</button>
+                    </div>
+                </div>
+
+                <div id="wa-container" class="action-buttons hidden" style="margin-top: 20px; padding-bottom: 20px;">
+                    <button onclick="sendWhatsApp()" style="background: #25D366; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);">
+                        Kirim Jawabanmu Ke WhatsApp 📱
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

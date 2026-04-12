@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Catch My Love Gift</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <audio id="game-music" loop>
+        <source src="img/Sound ultah.mpeg" type="audio/mpeg">
+    </audio>
+
+    <div id="game-container">
+        <div id="ui-layer">
+            <div id="score">Skor: 0</div>
+            <div id="lives-container">❤️❤️❤️</div>
+        </div>
+        
+        <div id="player">
+            <span class="gift-emoji">🎁</span>
+        </div>
+
+        <div id="effect-layer"></div>
+        
+        <div id="welcome-overlay" class="overlay">
+            <div class="welcome-gift">🎁</div>
+            <h1>Selamat datang di game penentuan untuk mendapatkan hadiah</h1>
+            <p class="credits"><i>By : @ekarmdni027</i></p>
+            <button onclick="showRules()">Mulai Game</button>
+        </div>
+
+        <div id="rules-overlay" class="overlay" style="display: none;">
+            <h2>📜 Ketentuan Permainan</h2>
+            <ul class="rules-list">
+                <li>⭐ <b>Bintang:</b> +20 Poin</li>
+                <li>💖 <b>Love:</b> +30 Poin</li>
+                <li>📸 <b>Foto:</b> +40 Poin (Spesial!)</li>
+                <li>💣 <b>Bom:</b> -1 Nyawa & Jeda</li>
+                <li>📦 <b>Tangkap:</b> Harus masuk ke dalam kado!</li>
+                <li>🏆 <b>Target:</b> Capai 1427 poin untuk menang.</li>
+            </ul>
+            <button onclick="startGame()">Saya Mengerti & Main</button>
+        </div>
+
+        <div id="game-over-overlay" class="overlay" style="display: none;">
+            <h1 id="status-text">STATUS</h1>
+            <p id="prize-text"></p>
+            <div id="action-buttons"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

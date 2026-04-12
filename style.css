@@ -1,0 +1,164 @@
+:root {
+    --primary: #ff477e;
+    --accent: #ff85a1;
+    --glass: rgba(255, 255, 255, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: #0a0a0a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* REVISI: Teks background diganti jadi BARAKALLAH FII UMRIK */
+body::before {
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    width: 300%; 
+    height: 300%;
+    /* Teks di bawah ini sudah saya ganti total */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='120'%3E%3Ctext x='10' y='60' font-family='Arial' font-weight='900' font-size='20' fill='rgba(255, 255, 255, 0.2)'%3EBARAKALLAH FII UMRIK%3C/text%3E%3C/svg%3E");
+    background-repeat: repeat;
+    transform: rotate(-35deg); 
+    z-index: 4; 
+    pointer-events: none;
+    animation: moveBG 40s linear infinite;
+}
+
+@keyframes moveBG {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+
+#canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
+
+.overlay { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: radial-gradient(circle, transparent 20%, #0a0a0a 120%); 
+    z-index: 3; 
+}
+
+.main-card {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 550px;
+    transition: all 0.5s ease;
+}
+
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+    padding: 25px 20px;
+}
+
+.header-fixed {
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+.scrollable-body {
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+
+.scrollable-body::-webkit-scrollbar { width: 5px; }
+.scrollable-body::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+.birthday-selector { display: flex; gap: 10px; margin-bottom: 20px; }
+.custom-select { flex: 1; padding: 12px; border-radius: 10px; border: 1px solid var(--accent); background: rgba(0,0,0,0.5); color: white; cursor: pointer; }
+.custom-select option { background: #1a1a1a; }
+
+.feedback { margin-bottom: 15px; font-size: 0.9rem; min-height: 20px; }
+.sad { color: #ffb3b3; font-style: italic; }
+.happy { color: #b3ffb3; font-weight: bold; }
+
+.hidden { display: none !important; }
+
+.photo-container { position: relative; width: 110px; height: 110px; margin: 0 auto 15px; }
+.profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); z-index: 5; position: relative; }
+.pulse { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: var(--primary); animation: pulse-ring 2s infinite; }
+
+.hb-text { font-family: 'Dancing Script', cursive; color: white; font-size: 1.7rem; margin-bottom: 10px; text-shadow: 0 0 10px var(--primary); }
+
+.gift-icon {
+    font-size: 100px;
+    animation: shake 0.6s infinite ease-in-out;
+    display: inline-block;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.message-box { 
+    color: #ffd1dc; 
+    font-size: 0.95rem; 
+    line-height: 1.6; 
+    text-align: left;
+    white-space: pre-line;
+    padding-bottom: 10px;
+}
+
+.gift-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.opt-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid var(--accent);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.85rem;
+}
+
+.opt-btn:hover { background: var(--accent); }
+.opt-btn.selected { background: var(--primary); border-color: white; transform: scale(1.05); }
+
+.action-buttons { margin-top: 15px; }
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes pulse-ring { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.3); opacity: 0; } }
