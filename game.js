@@ -162,7 +162,7 @@ function endGame() {
     gameMusic.pause();
 
     if (score >= targetWinScore) {
-        statusText.innerText = "YEY! KAMU MENANG 🎉";
+        statusText.innerText = "YEY! AYANG MENANG 🎉";
         statusText.style.color = "#2ecc71";
         prizeText.innerHTML = `Selamat sayang! Ayang berhasil mencapai target skor "1427" yang di tetapkan .<br>Silakan klik tombol di bawah untuk kembali dan memilih hadiah!`;
         
