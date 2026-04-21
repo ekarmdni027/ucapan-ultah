@@ -103,7 +103,7 @@ function spawnObject() {
     obj.style.top = '-60px';
     container.appendChild(obj);
 
-    let fallSpeed = 3 + (score / 120); 
+    let fallSpeed = 3 + (score / 240); 
     let fallInterval = setInterval(() => {
         if (!gameActive) { clearInterval(fallInterval); obj.remove(); return; }
         if (isPaused) return;
