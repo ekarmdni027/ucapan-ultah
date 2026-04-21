@@ -114,16 +114,20 @@ function animate() {
 }
 
 const message = `💖 Barakallah fii umrik, Susi Aprilia 💖
-🤍 Barakallah fii umrik ya, sayang 🤍
+🤍 Barakallah fii umrik yaa, sayang 🤍
 
 Hari ini hari spesial Ayang, dan aku cuma mau Ayang tau kalau aku bener-bener bersyukur banget punya Ayang di hidupku ini.
-Terima kasih sudah datang dan bertahan sejauh ini sama aku. Terima kasih buat semua perhatian kecil, semua cerita, semua tawa, dan bahkan semua ngambek Ayang yang kadang bikin aku geleng-geleng kepala tapi tetap kangen 😆. Ayang itu bukan cuma pacar aku, tapi juga teman ngobrol aku, tempat cerita aku, dan orang yang sering bikin mood aku balik lagi.
-Di umur Ayang yang baru ini, aku harap Ayang makin bahagia, makin sehat, makin lancar semua rezekinya, makin lancar semua urusannya, dan semua yang Ayang pengin bisa satu-satu tercapai. Kalau Ayang lagi capek, lagi sedih, atau lagi ngerasa sendirian, inget ya… Ayang selalu punya aku buat cerita, ngeluh, atau cuma buat ditemenin.
-Aku mungkin belum sempurna dan kadang masih banyak kurangnya, tapi perasaan aku ke Ayang itu serius. Aku sayang Ayang, aku peduli sama Ayang, dan aku pengin terus ada di samping Ayang, bukan cuma pas senang, tapi juga pas Ayang lagi butuh aku.
+Terima kasih sudah datang dan bertahan sejauh ini sama aku.
+Terima kasih buat semua perhatian kecil, semua cerita, semua tawa, dan bahkan semua ngambek Ayang yang kadang bikin aku geleng-geleng kepala tapi tetap kangen 😆.
+Ayang itu bukan cuma pacar aku, tapi juga teman ngobrol aku, tempat cerita aku, dan orang yang sering bikin mood aku balik lagi.
+Di umur Ayang yang baru ini, aku harap Ayang makin bahagia, makin sehat, makin lancar semua rezekinya, makin lancar semua urusannya, dan semua yang Ayang pengin bisa satu-satu tercapai.
+Kalau Ayang lagi capek, lagi sedih, atau lagi ngerasa sendirian, inget ya… Ayang selalu punya aku buat cerita, ngeluh, atau cuma buat ditemenin.
+Aku mungkin belum sempurna dan kadang masih banyak kurangnya, tapi perasaan aku ke Ayang itu serius. 
+Aku sayang Ayang, aku peduli sama Ayang, dan aku pengin terus ada di samping Ayang, bukan cuma pas senang, tapi juga pas Ayang lagi butuh aku.
 Pokoknya di hari spesial Ayang ini, aku doain yang paling terbaik buat Ayang.
 
 Jangan lupa bahagia, jangan lupa senyum, dan jangan lupa juga… Ayang punya pacar yang siap bawel, perhatian, dan cemburu dikit kalau Ayang makin cantik 😌😆
-Barakallah fii umrik, sayang 🤍
+Barakallah fii umrik yaa, sayang 🤍
 
 Semoga hari ini dipenuhi senyuman dan hal baik pada diri Ayang :)
 — @ekarmdni027 💫`;
@@ -168,7 +172,9 @@ window.selectGift = function(choice) {
 };
 
 window.sendWhatsApp = function() {
-    const text = `Haii Sayang, makasih ya buat ucapan yang Ayang kasih untuk aku ! Aku juga sayang banget sama Ayang ❤️. Untuk hadiahnya, aku pilih mau ke *${selectedGift}* aja deh, Bolehkan ! ✨`;
+    const text = `Haii Sayang, makasih ya buat ucapan yang Ayang kasih untuk aku !
+    Aku juga sayang banget sama Ayang ❤️.
+    Untuk hadiahnya, aku pilih mau ke *${selectedGift}* aja deh, Bolehkan ? ✨`;
     window.open("https://wa.me/6283142479937?text=" + encodeURIComponent(text), '_blank');
 };
 
