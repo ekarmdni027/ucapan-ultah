@@ -21,7 +21,7 @@ let spawnInterval;
 let heartRainInterval;
 
 // Daftar foto di folder img
-const photoList = ["April 1.jpeg", "April 2.jpeg", "April 3.jpeg", "April 4.jpeg"];
+const photoList = ["April 1.jpeg", "April 2.jpeg", "April 3.jpeg"];
 
 function createHeartRain() {
     if (welcomeOverlay.style.display === 'none' && rulesOverlay.style.display === 'none') return;
